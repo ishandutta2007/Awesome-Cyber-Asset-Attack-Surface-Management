@@ -1,293 +1,236 @@
 # Awesome-Cyber-Asset-Attack-Surface-Management
 
-Markdown
-## Top Cyber Asset Attack Surface Management (CAASM) Tools Ecosystem
+<div align="center">
 
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Cyber Asset Attack Surface Management (CAASM)" width="100%" />
+</p>
 
-**Curated List of SaaS/Hosted Platforms & Open-Source GitHub Projects**  
-*Focused on Cyber Asset Attack Surface Management, Asset Discovery, Exposure Management, Attack Surface Visibility & Security Control Coverage*  
-**Last updated: August 2026**
+<a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a><a href="https://github.com/ishandutta2007/Awesome-Cyber-Asset-Attack-Surface-Management/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Cyber-Asset-Attack-Surface-Management?style=for-the-badge&logo=apachespark&color=f59e0b" alt="Stars"/></a><a href="https://github.com/ishandutta2007/Awesome-Cyber-Asset-Attack-Surface-Management/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Cyber-Asset-Attack-Surface-Management?style=for-the-badge&color=10b981" alt="Forks"/></a><a href="https://github.com/ishandutta2007/Awesome-Cyber-Asset-Attack-Surface-Management/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Cyber-Asset-Attack-Surface-Management?style=for-the-badge&color=ef4444" alt="Issues"/></a><a href="https://github.com/ishandutta2007/Awesome-Cyber-Asset-Attack-Surface-Management/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="License"/></a><a href="https://github.com/ishandutta2007/Awesome-Cyber-Asset-Attack-Surface-Management/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge" alt="PRs Welcome"/></a><a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 
+<p align="center">
+  <b>🌐 Comprehensive curated guide to Cyber Asset Attack Surface Management (CAASM), External Attack Surface Management (EASM), Exposure Management, and Cyber Asset Discovery tools.</b>
+</p>
 
-This repository tracks notable **SaaS/hosted platforms** and **open-source projects** for **Cyber Asset Attack Surface Management (CAASM)**. These tools help organizations continuously discover, inventory, normalize, classify, contextualize, and monitor cyber assets across endpoints, networks, cloud, SaaS, identities, applications, containers, OT/IoT, and internet-facing infrastructure.
+</div>
 
+---
 
-**Examples** include Axonius, JupiterOne, Armis, Orca Security, Noetic Cyber, runZero, Panaseer, Tanium, Qualys CyberSecurity Asset Management, ServiceNow IT Asset Management, and other asset-visibility and exposure-management platforms. Current CAASM evaluations commonly include Axonius, Armis, Qualys CSAM, JupiterOne, runZero, and related platforms, although their approaches differ substantially. :contentReference[oaicite:0]{index=0}
+## 📑 Table of Contents
 
+- [🌟 Introduction & CAASM Overview](#-introduction--caasm-overview)
+- [🏢 SaaS / Commercial CAASM Platforms](#-saas--commercial-caasm-platforms)
+- [🔓 Open-Source GitHub Projects](#-open-source-github-projects)
+- [🏗️ Recommended Open-Source Architectural Stacks](#️-recommended-open-source-architectural-stacks)
+- [🧠 Core CAASM Concepts & Functional Domains](#-core-caasm-concepts--functional-domains)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [⭐ Star History](#-star-history)
+- [📄 Disclaimer & License](#-disclaimer--license)
 
-CAASM overlaps with **Cyber Asset Management, IT Asset Management (ITAM), External Attack Surface Management (EASM), Digital Risk Protection, Exposure Management, Vulnerability Management, Continuous Controls Monitoring (CCM), Security Operations, CMDB, IT Discovery, Network Discovery, Cloud Security, OT/IoT Security, and Configuration Management**.
+---
 
+## 🌟 Introduction & CAASM Overview
 
-**Open-source emphasis**: This repository heavily emphasizes open-source software that can be self-hosted and combined into a CAASM architecture. The open-source ecosystem is considerably more fragmented than the commercial CAASM market, so the section includes both emerging dedicated attack-surface platforms and mature open-source projects for asset discovery, network scanning, endpoint inventory, vulnerability management, cloud inventory, security telemetry, attack-surface reconnaissance, and asset-data correlation.
+**Cyber Asset Attack Surface Management (CAASM)** is an emerging security domain dedicated to solving persistent visibility and vulnerability gaps across modern hybrid environments. CAASM platforms continuously aggregate, correlate, and normalize asset telemetry across disparate systems—spanning endpoints, cloud workloads, SaaS applications, identity providers, network infrastructure, CI/CD pipelines, and OT/IoT devices.
 
+```mermaid
+flowchart LR
+    subgraph Ingestion["🔌 Ingestion & Discovery Sources"]
+        Cloud["☁️ Multi-Cloud (AWS, Azure, GCP)"]
+        Endpoints["💻 Endpoints & MDM (EDR, Osquery)"]
+        Identity["🔑 IAM & IdPs (Okta, Entra ID)"]
+        Network["🌐 Network Scanners & IPAM"]
+        SaaS["📱 SaaS & Code Repos (GitHub, Jira)"]
+    end
 
-A particularly relevant emerging project is **Open Attack Surface Management (OASM)**, an open-source platform designed for asset discovery, vulnerability assessment, technology detection, distributed scanning, monitoring, analytics, and AI-assisted asset analysis. :contentReference[oaicite:1]{index=1}
+    subgraph Core["⚙️ CAASM Core Engine"]
+        Normalize["🔄 Normalization & Deduplication"]
+        Graph["🕸️ Cyber Asset Graph"]
+        Gap["⚠️ Control Gap & Exposure Analysis"]
+    end
 
+    subgraph Actions["🚀 Remediation & Action"]
+        SOAR["🤖 Automated SOAR Playbooks"]
+        SIEM["📊 SIEM / SOC Telemetry"]
+        Ticket["🎫 ITSM & Jira Ticketing"]
+    end
 
-Another notable open-source exposure-management project is **XORCISM**, which combines asset management, vulnerability intelligence, security-tool integrations, CVE-to-asset matching, identity/device synchronization, and a large connector ecosystem. :contentReference[oaicite:2]{index=2}
+    Ingestion --> Core --> Actions
+```
 
+### 🎯 Key Benefits of CAASM:
+- 🔍 **Eliminate Blind Spots:** Detect unmanaged, rogue, and shadow-IT devices missing security agents (EDR, vulnerability scanners, MDM).
+- 🔄 **Automate Inventory:** Maintain a dynamic, real-time single source of truth for assets, replacing static spreadsheets.
+- 🛡️ **Continuous Controls Monitoring (CCM):** Instantly identify compliance drift, expired certificates, unencrypted buckets, and inactive user credentials.
+- ⚡ **Prioritize Exposures:** Connect vulnerability intelligence with real asset context, business criticality, and network blast radius.
 
-The goal is to provide an ecosystem map ranging from **enterprise CAASM platforms** to **open-source building blocks for constructing a self-hosted cyber-asset inventory and attack-surface management platform**.
+---
 
+## 🏢 SaaS / Commercial CAASM Platforms
 
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites or GitHub repositories.
+The following commercial CAASM and cyber exposure platforms are sorted in descending order by **Company Size (Valuation / Market Capitalization / Annual Revenue)**.
 
+| Platform | Company Size (Valuation / Revenue) | Description | Starting Pricing | Free Tier / Free Trial Limits |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Tanium](https://www.tanium.com/)** | **~$9.0B Valuation**<br>*(>$700M ARR)* | 🛡️ Real-time endpoint visibility, asset inventory, vulnerability management, configuration assessment, and SecOps platform. | Starts at ~$20–$24/endpoint/year (~$10,000/year minimum entry platform commitment) | 14-day to 30-day free trial / interactive hands-on lab environment |
+| **[Armis](https://www.armis.com/)** | **~$7.75B Valuation**<br>*(>$300M ARR; Acquired by ServiceNow)* | 🌐 Asset intelligence and cyber exposure management platform specialized in unmanaged devices, IoT, OT, IoMT, and cyber-physical systems. | Starts at ~$3,250/month ($39,000/year minimum platform entry floor via AWS Marketplace) | 14-day to 30-day guided interactive trial / Proof of Concept (PoC) |
+| **[Qualys CyberSecurity Asset Management](https://www.qualys.com/solutions/attack-surface-management)** | **~$6.8B Market Cap**<br>*(~$735M Revenue; NASDAQ: QLYS)* | 🔎 Discovers, categorizes, and manages known and unknown hybrid IT assets using agents, passive sensors, cloud connectors, and external attack surface management. | Starts at ~$10,870/year (entry tier for up to 1,000 assets / ~$10.87 per asset/year) | 30-day free trial with full CSAM asset inventory & external exposure detection |
+| **[Axonius](https://www.axonius.com/)** | **~$2.6B Valuation**<br>*(>$200M ARR)* | 🧩 Cyber Asset Management and CAASM platform aggregating data from security, IT, cloud, endpoint, identity, and infrastructure tools to provide unified asset visibility and detect security control gaps. | Starts at ~$35,000/year (~$25–$50 per asset/year for entry-level deployments) | 30-day free trial with full platform connector integrations and asset discovery |
+| **[Orca Security](https://orca.security/)** | **~$1.8B Valuation**<br>*(~$65M ARR)* | ☁️ Agentless cloud security and CAASM platform providing cloud asset discovery, vulnerability management, CSPM, and attack path analysis across multi-cloud environments. | Starts at ~$3,000/month ($36,000/year all-inclusive single SKU entry tier based on cloud workloads) | 30-day free trial / cloud risk assessment via AWS Marketplace SideScanning |
+| **[JupiterOne](https://www.jupiterone.com/)** | **~$1.0B+ Valuation**<br>*(~$12M ARR)* | 🕸️ Graph-based CAASM and cyber risk platform mapping asset relationships, coverage gaps, policy-as-code, and cross-domain security queries across cloud, code, and identities. | Starts at ~$500/month ($6,000/year) based on asset data point ingestion tiers | 14-day to 30-day free trial / guided Proof of Value (POV) |
+| **[Noetic Cyber](https://noeticcyber.com/)** *(Rapid7 Surface Command)* | **~$850M Market Cap**<br>*(~$860M Revenue; NASDAQ: RPD)* | ⚙️ Cyber asset management and continuous controls monitoring platform aggregating IT and security telemetry to uncover asset relationships and control gaps. | Starts at ~$1.93/asset/month (~$11,580/year for 500-asset minimum entry tier via Rapid7 Command) | 30-day free trial via Rapid7 platform evaluation |
+| **[runZero](https://www.runzero.com/)** | **~$300M+ Valuation**<br>*(Venture-backed, $60M+ raised)* | 📡 Network-centric asset discovery combining active network scanning, passive discovery, and fingerprinting for IT, OT, IoT, and remote environments. | Free tier available; Paid platform starts at $5,000/year (up to 1,000 assets) | **Free forever Community Edition** up to 100 assets (with 10 recurring tasks & 30-day retention); includes 21-day full platform trial upon signup |
+| **[Panaseer](https://panaseer.com/)** | **~$100M–$150M Est.**<br>*($93M Total Funding Raised)* | 📊 Continuous controls monitoring and cyber asset platform correlating security telemetry, establishing trusted inventories, and measuring control coverage. | Starts at ~$50,000/year for entry-level enterprise deployment | 30-day guided Proof of Concept (PoC) & Controls Assurance Workshop |
 
-## Table of Contents
+---
 
+## 🔓 Open-Source GitHub Projects
 
-- [SaaS/Hosted Platforms](#saashosted-platforms)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [Additional Open-Source & Security Infrastructure Projects](#additional-open-source--security-infrastructure-projects)
-- [Building a Custom Open-Source CAASM Stack](#building-a-custom-open-source-caasm-stack)
-- [Important CAASM Concepts](#important-caasm-concepts)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
+Curated open-source projects for asset discovery, endpoint inventory, external reconnaissance, cloud inventory, vulnerability correlation, and cyber exposure graphs. Repositories are sorted in **descending order by GitHub Stars ⭐**.
 
+1. **[Trivy](https://github.com/aquasecurity/trivy)** [![GitHub stars](https://img.shields.io/github/stars/aquasecurity/trivy?style=social&color=white)](https://github.com/aquasecurity/trivy/stargazers)  
+   🛡️ Comprehensive vulnerability, misconfiguration, secret, and SBOM scanner for containers, Kubernetes clusters, code repositories, and cloud workloads.
 
-## SaaS/Hosted Platforms
+2. **[Nuclei](https://github.com/projectdiscovery/nuclei)** [![GitHub stars](https://img.shields.io/github/stars/projectdiscovery/nuclei?style=social&color=white)](https://github.com/projectdiscovery/nuclei/stargazers)  
+   ⚡ Fast, template-based vulnerability and attack-surface scanner for detecting zero-days, CVEs, misconfigurations, and technology exposures across assets.
 
-| Platform | Description | Starting Pricing | Free Tier / Free Trial Limits |
-| :--- | :--- | :--- | :--- |
-| **[Axonius](https://www.axonius.com/)** | Cyber Asset Management and CAASM platform aggregating data from security, IT, cloud, endpoint, identity, and infrastructure tools to provide unified asset visibility and detect security control gaps. | Starts at ~$35,000/year (~$25–$50 per asset/year for entry-level deployments) | 30-day free trial with full platform connector integrations and asset discovery |
-| **[JupiterOne](https://www.jupiterone.com/)** | Graph-based CAASM and cyber risk platform mapping asset relationships, coverage gaps, policy-as-code, and cross-domain security queries across cloud, code, and identities. | Starts at ~$500/month ($6,000/year) based on asset data point ingestion tiers | 14-day to 30-day free trial / guided Proof of Value (POV) |
-| **[Armis](https://www.armis.com/)** | Asset intelligence and cyber exposure management platform specialized in unmanaged devices, IoT, OT, IoMT, and cyber-physical systems. | Starts at ~$3,250/month ($39,000/year minimum platform entry floor via AWS Marketplace) | 14-day to 30-day guided interactive trial / Proof of Concept (PoC) |
-| **[Orca Security](https://orca.security/)** | Agentless cloud security and CAASM platform providing cloud asset discovery, vulnerability management, CSPM, and attack path analysis across multi-cloud environments. | Starts at ~$3,000/month ($36,000/year all-inclusive single SKU entry tier based on cloud workloads) | 30-day free trial / cloud risk assessment via AWS Marketplace SideScanning |
-| **[Noetic Cyber](https://noeticcyber.com/)** *(Rapid7 Surface Command)* | Cyber asset management and continuous controls monitoring platform aggregating IT and security telemetry to uncover asset relationships and control gaps. | Starts at ~$1.93/asset/month (~$11,580/year for 500-asset minimum entry tier via Rapid7 Command) | 30-day free trial via Rapid7 platform evaluation |
-| **[runZero](https://www.runzero.com/)** | Network-centric asset discovery combining active network scanning, passive discovery, and fingerprinting for IT, OT, IoT, and remote environments. | Free tier available; Paid platform starts at $5,000/year (up to 1,000 assets) | **Free forever Community Edition** up to 100 assets (with 10 recurring tasks & 30-day retention); includes 21-day full platform trial upon signup |
-| **[Panaseer](https://panaseer.com/)** | Continuous controls monitoring and cyber asset platform correlating security telemetry, establishing trusted inventories, and measuring control coverage. | Starts at ~$50,000/year for entry-level enterprise deployment | 30-day guided Proof of Concept (PoC) & Controls Assurance Workshop |
-| **[Tanium](https://www.tanium.com/)** | Real-time endpoint visibility, asset inventory, vulnerability management, configuration assessment, and SecOps platform. | Starts at ~$20–$24/endpoint/year (~$10,000/year minimum entry platform commitment) | 14-day to 30-day free trial / hands-on lab environment |
-| **[Qualys CyberSecurity Asset Management](https://www.qualys.com/solutions/attack-surface-management)** | Discovers, categorizes, and manages known and unknown hybrid IT assets using agents, passive sensors, cloud connectors, and external attack surface management. | Starts at ~$10,870/year (entry tier for up to 1,000 assets / ~$10.87 per asset/year) | 30-day free trial with full CSAM asset inventory & external exposure detection |
-Recommended Open-Source Combinations
+3. **[osquery](https://github.com/osquery/osquery)** [![GitHub stars](https://img.shields.io/github/stars/osquery/osquery?style=social&color=white)](https://github.com/osquery/osquery/stargazers)  
+   💻 SQL-powered operating system instrumentation framework that treats endpoints as relational databases for live software inventory, configuration auditing, and compliance.
 
-Basic Network CAASM
+4. **[NetBox](https://github.com/netbox-community/netbox)** [![GitHub stars](https://img.shields.io/github/stars/netbox-community/netbox?style=social&color=white)](https://github.com/netbox-community/netbox/stargazers)  
+   🗄️ Leading source of truth and IPAM/DCIM platform for modeling physical hardware, virtual machines, cloud instances, VLANs, and network topology.
 
-Nmap + NetBox + PostgreSQL + Grafana
+5. **[Katana](https://github.com/projectdiscovery/katana)** [![GitHub stars](https://img.shields.io/github/stars/projectdiscovery/katana?style=social&color=white)](https://github.com/projectdiscovery/katana/stargazers)  
+   🕷️ Next-generation web crawler and asset endpoint discovery framework designed to enumerate hidden URLs, APIs, and attack surfaces.
 
-Suitable for organizations primarily interested in continuously discovering and inventorying network-connected assets.
+6. **[Wazuh](https://github.com/wazuh/wazuh)** [![GitHub stars](https://img.shields.io/github/stars/wazuh/wazuh?style=social&color=white)](https://github.com/wazuh/wazuh/stargazers)  
+   🛡️ Open-source unified XDR, SIEM, and endpoint security platform delivering continuous software inventory, vulnerability assessment, and compliance telemetry.
 
-Endpoint-Centric CAASM
+7. **[OWASP Amass](https://github.com/owasp-amass/amass)** [![GitHub stars](https://img.shields.io/github/stars/owasp-amass/amass?style=social&color=white)](https://github.com/owasp-amass/amass/stargazers)  
+   🛰️ In-depth attack surface mapping and external asset discovery framework using active reconnaissance, DNS enumeration, and OSINT harvesting.
 
-osquery + Fleet + Wazuh + PostgreSQL/ClickHouse
+8. **[Prowler](https://github.com/prowler-cloud/prowler)** [![GitHub stars](https://img.shields.io/github/stars/prowler-cloud/prowler?style=social&color=white)](https://github.com/prowler-cloud/prowler/stargazers)  
+   ☁️ Leading multi-cloud security assessment tool for AWS, Azure, GCP, and Kubernetes asset discovery, compliance monitoring, and exposure remediation.
 
-Provides endpoint inventory, software information, security telemetry, vulnerability information, and centralized analysis.
+9. **[Subfinder](https://github.com/projectdiscovery/subfinder)** [![GitHub stars](https://img.shields.io/github/stars/projectdiscovery/subfinder?style=social&color=white)](https://github.com/projectdiscovery/subfinder/stargazers)  
+   🔎 High-speed passive subdomain discovery tool designed to map external organizational asset infrastructure without sending active traffic to targets.
 
-External Attack Surface Stack
+10. **[Nmap](https://github.com/nmap/nmap)** [![GitHub stars](https://img.shields.io/github/stars/nmap/nmap?style=social&color=white)](https://github.com/nmap/nmap/stargazers)  
+    🌐 The industry-standard network exploration and port scanning utility for discovering active devices, open ports, OS fingerprinting, and running services.
 
-Amass + Subfinder + Naabu + httpx + Nuclei + PostgreSQL
+11. **[httpx](https://github.com/projectdiscovery/httpx)** [![GitHub stars](https://img.shields.io/github/stars/projectdiscovery/httpx?style=social&color=white)](https://github.com/projectdiscovery/httpx/stargazers)  
+    🚀 Fast and multi-purpose HTTP toolkit allowing multi-probe testing for TLS certificates, status codes, technology stacks, and web server banners.
 
-Useful for continuously discovering domains, subdomains, IPs, ports, web services, technologies, and exposures on an organization's external attack surface.
+12. **[Steampipe](https://github.com/turbot/steampipe)** [![GitHub stars](https://img.shields.io/github/stars/turbot/steampipe?style=social&color=white)](https://github.com/turbot/steampipe/stargazers)  
+    📊 Zero-ETL SQL engine that queries live cloud APIs, SaaS services, identity directories, and code repositories directly as relational SQL tables.
 
-Cloud CAASM Stack
+13. **[Fleet](https://github.com/fleetdm/fleet)** [![GitHub stars](https://img.shields.io/github/stars/fleetdm/fleet?style=social&color=white)](https://github.com/fleetdm/fleet/stargazers)  
+    🖥️ Open-source endpoint management and osquery manager providing real-time fleet-wide device inventory, software monitoring, and patch verification.
 
-CloudQuery + Steampipe + Cartography + Neo4j
+14. **[CloudQuery](https://github.com/cloudquery/cloudquery)** [![GitHub stars](https://img.shields.io/github/stars/cloudquery/cloudquery?style=social&color=white)](https://github.com/cloudquery/cloudquery/stargazers)  
+    🔄 High-performance open-source data integration framework that extracts cloud and security configurations and loads them into PostgreSQL, ClickHouse, or Snowflake.
 
-Provides cloud-resource inventory together with relationship mapping and graph-based analysis.
+15. **[Naabu](https://github.com/projectdiscovery/naabu)** [![GitHub stars](https://img.shields.io/github/stars/projectdiscovery/naabu?style=social&color=white)](https://github.com/projectdiscovery/naabu/stargazers)  
+    ⚡ Extremely fast Go-based port scanner designed for reliability, simplicity, and active SYN/CONNECT network discovery pipelines.
 
-Open-Source Exposure Management Stack
+16. **[Recon-ng](https://github.com/lanmaster53/recon-ng)** [![GitHub stars](https://img.shields.io/github/stars/lanmaster53/recon-ng?style=social&color=white)](https://github.com/lanmaster53/recon-ng/stargazers)  
+    🕵️ Modular Web Reconnaissance framework providing open-source intelligence gathering and asset harvesting through an interactive CLI environment.
 
-OASM + Nmap + Nuclei + OpenVAS + osquery + Wazuh
+17. **[ThreatMapper](https://github.com/deepfence/ThreatMapper)** [![GitHub stars](https://img.shields.io/github/stars/deepfence/ThreatMapper?style=social&color=white)](https://github.com/deepfence/ThreatMapper/stargazers)  
+    📈 Open-source CNAPP and exposure management platform that dynamically discovers cloud assets, containers, dependencies, and attack paths.
 
-OASM can serve as the central attack-surface layer while specialized open-source scanners provide deeper asset and vulnerability telemetry. OASM explicitly supports distributed scanning, vulnerability assessment, technology detection, monitoring, and analytics. 
-GitHub
-+1
+18. **[OpenVAS Scanner](https://github.com/greenbone/openvas-scanner)** [![GitHub stars](https://img.shields.io/github/stars/greenbone/openvas-scanner?style=social&color=white)](https://github.com/greenbone/openvas-scanner/stargazers)  
+    🔍 Robust network vulnerability scanner component of Greenbone Community Edition executing thousands of daily vulnerability tests against assets.
 
-Advanced Open-Source CAASM Stack
+19. **[Cartography](https://github.com/lyft/cartography)** [![GitHub stars](https://img.shields.io/github/stars/lyft/cartography?style=social&color=white)](https://github.com/lyft/cartography/stargazers)  
+    🕸️ Python-based security tool that consolidates infrastructure assets and dependencies into an intuitive Neo4j graph for complex relationship queries.
 
-Network Discovery → Endpoint Discovery → Cloud Discovery → Kafka → Asset Normalization → Neo4j/NetBox → Vulnerability Correlation → Risk Engine → Grafana/OpenSearch → SOAR
+20. **[CloudFox](https://github.com/BishopFox/cloudfox)** [![GitHub stars](https://img.shields.io/github/stars/BishopFox/cloudfox?style=social&color=white)](https://github.com/BishopFox/cloudfox/stargazers)  
+    🦊 Command-line situational awareness tool for penetration testers and defenders to identify exploitable assets, permissions, and paths in cloud environments.
 
-This architecture resembles the conceptual architecture of modern commercial CAASM platforms: aggregate data from many sources, normalize and deduplicate assets, establish relationships, identify missing security controls, enrich assets with vulnerabilities and business context, and automate remediation.
+21. **[Nosey Parker](https://github.com/praetorian-inc/noseyparker)** [![GitHub stars](https://img.shields.io/github/stars/praetorian-inc/noseyparker?style=social&color=white)](https://github.com/praetorian-inc/noseyparker/stargazers)  
+    🔑 High-speed secrets scanner identifying API tokens, credentials, and exposed keys within Git repositories and asset filesystems.
 
-Exposure-Management Stack
+22. **[XORCISM](https://github.com/XORCISM-AI/XORCISM)** [![GitHub stars](https://img.shields.io/github/stars/XORCISM-AI/XORCISM?style=social&color=white)](https://github.com/XORCISM-AI/XORCISM/stargazers)  
+    🔗 Open-source cyber exposure management platform unifying connector ecosystems, asset inventories, and automated CVE-to-asset mapping.
 
-XORCISM + Nmap/Nuclei/OpenVAS + Wazuh + CloudQuery + Neo4j
+23. **[OASM Connectors](https://github.com/oasm-platform/oasm-connectors)** [![GitHub stars](https://img.shields.io/github/stars/oasm-platform/oasm-connectors?style=social&color=white)](https://github.com/oasm-platform/oasm-connectors/stargazers)  
+    🧩 Connector ecosystem extending Open Attack Surface Management (OASM) with distributed multi-engine scanning, tech detection, and analytics.
 
-XORCISM is particularly interesting for this architecture because its connector ecosystem is designed to normalize findings and assets from many security tools and automatically correlate CVEs with affected assets. 
-GitHub
+---
 
-Important CAASM Concepts
+## 🏗️ Recommended Open-Source Architectural Stacks
 
-A complete CAASM system typically combines several capabilities:
+Building a custom, self-hosted CAASM platform involves pairing specialized discovery engines with centralized graph and analytics backends:
 
-Asset Discovery — Finding all known and unknown cyber assets.
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│                        Self-Hosted CAASM Stack                         │
+├────────────────────────────────────────────────────────────────────────┤
+│  🔍 Discovery:       Nmap / Subfinder / httpx / CloudQuery / osquery   │
+│  🔄 Normalization:   Kafka / Airflow / Python Data Pipelines           │
+│  🕸️ Relationship:    Neo4j / NetBox / PostgreSQL / ClickHouse          │
+│  ⚠️ Exposure:        Nuclei / Trivy / Wazuh / OpenVAS                  │
+│  📊 Presentation:    Grafana / OpenSearch / Custom Web Dashboard       │
+└────────────────────────────────────────────────────────────────────────┘
+```
 
-Continuous Asset Inventory — Maintaining an up-to-date inventory rather than a periodic spreadsheet.
+### 1. 🌐 Basic Network CAASM
+- **Stack:** `Nmap` + `NetBox` + `PostgreSQL` + `Grafana`
+- **Use Case:** Continuously discovers and catalogs IP addresses, open ports, device types, and subnet allocations across on-premises networks.
 
-Asset Normalization — Converting heterogeneous data from multiple tools into a common asset model.
+### 2. 💻 Endpoint-Centric CAASM
+- **Stack:** `osquery` + `Fleet` + `Wazuh` + `ClickHouse`
+- **Use Case:** Pulls real-time hardware, OS, installed software, patch levels, and security agent statuses across corporate workstations and servers.
 
-Asset Deduplication — Determining when multiple tools are referring to the same underlying asset.
+### 3. 🛰️ External Attack Surface Management (EASM) Stack
+- **Stack:** `Subfinder` + `Naabu` + `httpx` + `OWASP Amass` + `Nuclei` + `PostgreSQL`
+- **Use Case:** Maps external-facing domains, subdomains, certificates, open services, and known software vulnerabilities.
 
-Identity Resolution — Connecting different identifiers for the same device, application, user, or cloud resource.
+### 4. ☁️ Cloud CAASM & Posture Graph
+- **Stack:** `CloudQuery` + `Steampipe` + `Cartography` + `Neo4j`
+- **Use Case:** Queries multi-cloud infrastructure via SQL and renders identity permissions, IAM relationships, and asset dependencies as a queryable graph.
 
-Asset Enrichment — Adding ownership, location, business unit, criticality, vulnerabilities, and other context.
+### 5. 🛡️ Enterprise Exposure Management Stack
+- **Stack:** `XORCISM` / `OASM` + `Nuclei` + `Trivy` + `Wazuh` + `CloudQuery` + `Neo4j` + `SOAR`
+- **Use Case:** Mirrors commercial CAASM platforms by normalizing multi-vendor telemetry, correlating CVEs to business owners, and executing automated remediation workflows.
 
-Asset Ownership — Determining who owns or is responsible for each asset.
+---
 
-Business Criticality — Identifying assets that are particularly important to business operations.
+## 🧠 Core CAASM Concepts & Functional Domains
 
-Unknown Asset Discovery — Finding assets absent from official inventories.
+| Concept | Icon | Operational Objective |
+| :--- | :---: | :--- |
+| **Asset Discovery** | 🔎 | Identifying all known, unknown, transient, and unmanaged cyber assets across hybrid environments. |
+| **Asset Normalization** | 🔄 | Standardizing heterogeneous data schemas from disparate IT/security tools into a unified asset model. |
+| **Asset Deduplication** | 🧩 | Resolving overlapping identities (MAC, IP, serial, hostname, cloud ARN) to a single canonical entity. |
+| **Control Gap Detection** | ⚠️ | Pinpointing assets missing critical security controls (EDR, MDM, vulnerability scanners, MFA). |
+| **Continuous Monitoring** | ⏱️ | Real-time tracking of asset drift, configuration changes, and new exposure introductions. |
+| **Exposure Management** | 🎯 | Combining vulnerability telemetry, exploitability data, and business criticality to prioritize risk. |
+| **Attack Path Analysis** | 🕸️ | Tracing multi-hop lateral movement vectors from perimeter exposures to core crown jewels. |
+| **Remediation Automation** | 🤖 | Triggering automated playbooks in SOAR, ticketing in ITSM, or isolating non-compliant assets. |
 
-Shadow IT Discovery — Identifying unauthorized applications, services, devices, and infrastructure.
+---
 
-Rogue Asset Detection — Detecting unauthorized or unexpected devices.
+## 🤝 How to Contribute
 
-Endpoint Discovery — Identifying laptops, desktops, servers, and other endpoints.
+Contributions are warmly welcomed! To suggest a new tool or update existing information:
 
-Network Discovery — Mapping network-connected devices and services.
+1. 🍴 **Fork the repository**.
+2. 🌿 **Create a new branch**: `git checkout -b add-my-tool`.
+3. 📝 **Edit `README.md`**: Follow the established formatting conventions (include links, descriptions, pricing/star metrics).
+4. 🚀 **Submit a Pull Request**: Include a brief rationale of the tool and why it adds value to the CAASM community.
 
-Cloud Asset Discovery — Discovering resources across AWS, Azure, GCP, and other clouds.
+---
 
-SaaS Discovery — Identifying applications and SaaS services used by an organization.
+## ⭐ Star History
 
-Identity Discovery — Inventorying users, service accounts, roles, and machine identities.
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Cyber-Asset-Attack-Surface-Management&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Cyber-Asset-Attack-Surface-Management&type=date&legend=top-left)
 
-Application Inventory — Tracking applications, services, APIs, and software components.
+---
 
-Container Discovery — Inventorying containers, images, clusters, and workloads.
+## 📄 Disclaimer & License
 
-Kubernetes Discovery — Mapping clusters, nodes, workloads, services, and identities.
-
-OT/IoT Discovery — Identifying operational technology and Internet-of-Things assets.
-
-External Attack Surface Management — Discovering Internet-facing infrastructure.
-
-EASM — External Attack Surface Management for domains, IPs, applications, APIs, and services.
-
-CAASM — Internal and cross-domain cyber asset visibility and security-control analysis.
-
-ITAM — Lifecycle management of IT assets.
-
-CMDB Integration — Connecting security asset intelligence with configuration-management databases.
-
-Security Tool Integration — Ingesting information from EDR, XDR, SIEM, IAM, CSPM, vulnerability scanners, MDM, and other tools.
-
-API-Based Discovery — Pulling asset data directly from cloud and security platforms.
-
-Agentless Discovery — Discovering assets without deploying endpoint agents.
-
-Active Scanning — Probing networks and services to discover assets.
-
-Passive Discovery — Learning about assets from observed network traffic and telemetry.
-
-Fingerprinting — Determining operating systems, services, applications, and technologies.
-
-Vulnerability Correlation — Linking vulnerabilities to specific assets.
-
-Configuration Assessment — Identifying insecure configurations.
-
-Security Control Coverage — Determining which assets are protected by required controls.
-
-Control Gap Detection — Identifying assets missing EDR, vulnerability scanning, MFA, encryption, logging, or other controls.
-
-Continuous Controls Monitoring — Continuously verifying that security controls remain effective.
-
-Exposure Management — Combining assets, vulnerabilities, misconfigurations, identities, and business context to prioritize risk.
-
-Risk Prioritization — Ranking assets and exposures based on likelihood and business impact.
-
-Attack Path Analysis — Understanding paths from exposures to critical assets.
-
-Blast Radius Analysis — Determining the potential impact of compromised assets.
-
-Crown Jewel Identification — Identifying highly sensitive or business-critical systems.
-
-Asset Relationship Graphs — Modeling relationships between devices, users, applications, identities, networks, and data.
-
-Dependency Mapping — Understanding infrastructure and application dependencies.
-
-Business Context — Connecting technical assets to business owners, applications, departments, and processes.
-
-Policy-as-Code — Defining security and asset-management requirements as machine-evaluable policies.
-
-Compliance Coverage — Measuring whether assets satisfy regulatory or organizational controls.
-
-Continuous Monitoring — Detecting asset changes and new exposures over time.
-
-Drift Detection — Detecting changes from approved configurations or security baselines.
-
-Lifecycle Management — Tracking asset creation, modification, ownership, retirement, and disposal.
-
-Software Inventory — Maintaining an inventory of installed and deployed software.
-
-End-of-Life Detection — Identifying unsupported hardware, operating systems, and software.
-
-Attack Surface Reduction — Removing unnecessary, vulnerable, or unmanaged assets.
-
-Remediation Automation — Automatically initiating actions against identified security gaps.
-
-Security Orchestration — Connecting CAASM findings to ticketing, SOAR, ITSM, and remediation systems.
-
-Data Quality — Measuring completeness, accuracy, freshness, and consistency of asset information.
-
-Asset Confidence Scoring — Measuring confidence in discovered asset identities and attributes.
-
-Real-Time Inventory — Maintaining near-real-time visibility into rapidly changing infrastructure.
-
-Historical Asset Tracking — Maintaining a timeline of asset changes.
-
-M&A Asset Discovery — Discovering inherited infrastructure during mergers and acquisitions.
-
-Third-Party Asset Discovery — Identifying assets operated by vendors or third parties.
-
-Internet Exposure Monitoring — Monitoring externally exposed services and infrastructure.
-
-Attack Surface Graphs — Representing the relationships between assets, vulnerabilities, identities, and controls.
-
-AI-Assisted Security Queries — Using AI to query and reason over asset inventories.
-
-Natural-Language Asset Search — Asking security questions in natural language.
-
-Automated Asset Classification — Automatically categorizing assets by type, owner, risk, or business function.
-
-Automated Remediation — Triggering security or IT workflows when asset conditions violate policy.
-
-Security Coverage Metrics — Measuring the percentage of assets covered by security controls.
-
-Unknown-to-Known Conversion — Turning previously unidentified assets into managed assets.
-
-Exposure-to-Asset Mapping — Connecting vulnerabilities and exposures to concrete assets.
-
-Asset-to-Business Mapping — Connecting technical infrastructure to business services and owners.
-
-How to Contribute
-
-Fork the repo.
-
-Add/edit entries in README.md (follow the existing format).
-
-Include: name, official link or GitHub repository, 1–2 sentence description, and whether it is SaaS/hosted or open-source.
-
-Prefer projects with active repositories and meaningful documentation.
-
-For open-source projects, accurately identify the primary capability — CAASM, EASM, asset discovery, ITAM, endpoint inventory, vulnerability management, cloud discovery, network discovery, or supporting infrastructure.
-
-Do not label a network scanner, vulnerability scanner, CMDB, or ITAM system as a complete CAASM platform unless it actually provides CAASM functionality.
-
-Verify the project's current license before adding it.
-
-Submit a PR with a short explanation.
-
-Star the repo if you find it useful!
-
-Disclaimer
-
-This is a community-curated list — not exhaustive and not an endorsement.
-
-CAASM overlaps significantly with ITAM, CMDB, EASM, vulnerability management, exposure management, cloud security, endpoint management, network discovery, and security operations.
-
-The open-source ecosystem for complete CAASM platforms is substantially smaller than the commercial ecosystem. Many open-source projects therefore provide individual layers rather than a complete Axonius/JupiterOne/Armis equivalent.
-
-Open-source, source-available, open-core, and hosted offerings are not equivalent. Always verify the current license and self-hosting terms before adoption.
-
-Asset discovery and security scanning should only be performed on systems and networks that you own or are explicitly authorized to assess.
-
-Active Internet scanning can generate substantial traffic and may trigger security controls or provider abuse mechanisms. Use appropriate authorization, rate limits, and scanning policies.
-
-Asset inventories may contain sensitive infrastructure, identity, vulnerability, and security information and should be protected accordingly.
-
-Production CAASM systems should implement appropriate authentication, authorization, encryption, audit logging, retention, backup, disaster recovery, and data-governance controls.
-
-Security findings should be validated before automated remediation is performed.
-
-Made for CISOs, security architects, SecOps teams, IT asset managers, vulnerability-management teams, cloud-security engineers, network teams, DevSecOps teams, and developers building modern cyber-asset visibility platforms.
-Let's make cyber asset attack surface management more open, composable, transparent, continuously monitored, and developer-friendly.
+- 📖 This list is community-curated for informational and educational purposes. Inclusion does not imply official endorsement.
+- ⚖️ Always ensure you possess explicit legal authorization prior to executing active discovery or vulnerability scans against any network or infrastructure.
+- 📜 This repository is licensed under the [MIT License](LICENSE).
