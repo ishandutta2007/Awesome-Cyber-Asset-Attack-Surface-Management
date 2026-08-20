@@ -47,41 +47,17 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## SaaS/Hosted Platforms
 
-
-- **[Axonius](https://www.axonius.com/)**  
-  Cyber Asset Management and CAASM platform that aggregates data from security, IT, cloud, endpoint, identity, and infrastructure tools to create a unified view of organizational assets and identify security-control gaps.
-
-
-- **[JupiterOne](https://www.jupiterone.com/)**  
-  CAASM and cyber risk platform that continuously aggregates assets across cloud, code, identity, endpoints, SaaS, and other systems into a connected asset graph. It emphasizes relationships between assets, coverage gaps, policy-as-code, and cross-domain security queries. :contentReference[oaicite:3]{index=3}
-
-
-- **[Armis](https://www.armis.com/)**  
-  Asset intelligence and cyber exposure-management platform with particularly strong capabilities for unmanaged devices, IoT, OT, medical devices, operational technology, and other cyber-physical environments.
-
-
-- **[Orca Security](https://orca.security/)**  
-  Cloud-native security platform providing agentless cloud asset discovery, vulnerability management, cloud security posture management, attack-path analysis, and exposure management across cloud environments.
-
-
-- **[Noetic Cyber](https://noeticcyber.com/)**  
-  Cyber asset management and continuous controls monitoring platform designed to aggregate security and IT data, discover asset relationships, identify security-control gaps, and improve asset visibility.
-
-
-- **[runZero](https://www.runzero.com/)**  
-  Network-centric asset discovery platform combining active network scanning, passive discovery, fingerprinting, and integrations to identify managed, unmanaged, unknown, and potentially rogue assets across IT, OT, IoT, and remote environments. :contentReference[oaicite:4]{index=4}
-
-
-- **[Panaseer](https://panaseer.com/)**  
-  Cyber asset management and security-control monitoring platform focused on creating trusted asset inventories, correlating security telemetry, identifying control gaps, and measuring security-control effectiveness. :contentReference[oaicite:5]{index=5}
-
-
-- **[Tanium](https://www.tanium.com/)**  
-  Enterprise endpoint and asset-management platform providing real-time endpoint visibility, asset inventory, vulnerability management, configuration management, and security operations capabilities.
-
-
-- **[Qualys CyberSecurity Asset Management](https://www.qualys.com/solutions/attack-surface-management)**  
-  Cyber asset management platform for discovering, identifying, classifying, and managing known and unknown assets across hybrid IT. Qualys combines agents, scanners, passive network sensors, API integrations, cloud discovery, and external attack-surface capabilities. :contentReference[oaicite:6]{index=6}
+| Platform | Description | Starting Pricing | Free Tier / Free Trial Limits |
+| :--- | :--- | :--- | :--- |
+| **[Axonius](https://www.axonius.com/)** | Cyber Asset Management and CAASM platform aggregating data from security, IT, cloud, endpoint, identity, and infrastructure tools to provide unified asset visibility and detect security control gaps. | Starts at ~$35,000/year (~$25–$50 per asset/year for entry-level deployments) | 30-day free trial with full platform connector integrations and asset discovery |
+| **[JupiterOne](https://www.jupiterone.com/)** | Graph-based CAASM and cyber risk platform mapping asset relationships, coverage gaps, policy-as-code, and cross-domain security queries across cloud, code, and identities. | Starts at ~$500/month ($6,000/year) based on asset data point ingestion tiers | 14-day to 30-day free trial / guided Proof of Value (POV) |
+| **[Armis](https://www.armis.com/)** | Asset intelligence and cyber exposure management platform specialized in unmanaged devices, IoT, OT, IoMT, and cyber-physical systems. | Starts at ~$3,250/month ($39,000/year minimum platform entry floor via AWS Marketplace) | 14-day to 30-day guided interactive trial / Proof of Concept (PoC) |
+| **[Orca Security](https://orca.security/)** | Agentless cloud security and CAASM platform providing cloud asset discovery, vulnerability management, CSPM, and attack path analysis across multi-cloud environments. | Starts at ~$3,000/month ($36,000/year all-inclusive single SKU entry tier based on cloud workloads) | 30-day free trial / cloud risk assessment via AWS Marketplace SideScanning |
+| **[Noetic Cyber](https://noeticcyber.com/)** *(Rapid7 Surface Command)* | Cyber asset management and continuous controls monitoring platform aggregating IT and security telemetry to uncover asset relationships and control gaps. | Starts at ~$1.93/asset/month (~$11,580/year for 500-asset minimum entry tier via Rapid7 Command) | 30-day free trial via Rapid7 platform evaluation |
+| **[runZero](https://www.runzero.com/)** | Network-centric asset discovery combining active network scanning, passive discovery, and fingerprinting for IT, OT, IoT, and remote environments. | Free tier available; Paid platform starts at $5,000/year (up to 1,000 assets) | **Free forever Community Edition** up to 100 assets (with 10 recurring tasks & 30-day retention); includes 21-day full platform trial upon signup |
+| **[Panaseer](https://panaseer.com/)** | Continuous controls monitoring and cyber asset platform correlating security telemetry, establishing trusted inventories, and measuring control coverage. | Starts at ~$50,000/year for entry-level enterprise deployment | 30-day guided Proof of Concept (PoC) & Controls Assurance Workshop |
+| **[Tanium](https://www.tanium.com/)** | Real-time endpoint visibility, asset inventory, vulnerability management, configuration assessment, and SecOps platform. | Starts at ~$20–$24/endpoint/year (~$10,000/year minimum entry platform commitment) | 14-day to 30-day free trial / hands-on lab environment |
+| **[Qualys CyberSecurity Asset Management](https://www.qualys.com/solutions/attack-surface-management)** | Discovers, categorizes, and manages known and unknown hybrid IT assets using agents, passive sensors, cloud connectors, and external attack surface management. | Starts at ~$10,870/year (entry tier for up to 1,000 assets / ~$10.87 per asset/year) | 30-day free trial with full CSAM asset inventory & external exposure detection |
 Recommended Open-Source Combinations
 
 Basic Network CAASM
